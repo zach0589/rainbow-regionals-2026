@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 2026 Restoration Marketing Reality | State of the Industry</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
+  <style>
+    :root {
+      --rbw-navy: #1B3057;
+      --rbw-red: #C8102E;
+      --rbw-gray: #58595B;
+      --rbw-light-gray: #F2F2F2;
+      --rbw-white: #FFFFFF;
+    }
+    html, body { margin:0; padding:0; width:100%; height:100%; overflow:hidden; }
+    .reveal { font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif; color:var(--rbw-navy); }
+    .reveal .slides { text-align:left; }
+    .reveal .slides section { text-align:left; padding:48px 80px 60px; box-sizing:border-box; height:100%; }
+
+    /* Logo bar */
+    .logo-bar { position:absolute; bottom:16px; left:40px; right:40px; display:flex; justify-content:space-between; align-items:center; pointer-events:none; z-index:10; }
+    .logo-bar img { height:40px; opacity:0.9; }
+    .logo-bar img[alt="Rainbow Restoration"] { height:55px; }
+    .title-slide .logo-bar img.logo-dark,
+    .section-divider .logo-bar img.logo-dark { display:none; }
+    .title-slide .logo-bar img.logo-light,
+    .section-divider .logo-bar img.logo-light { display:inline; }
+    .logo-bar img.logo-light { display:none; }
+    .logo-bar img.logo-dark { display:inline; }
+
+    /* Title slide */
+    .reveal .slides section.title-slide { text-align:center; background:var(--rbw-navy); color:var(--rbw-white); display:flex; flex-direction:column; justify-content:center; align-items:center; padding:60px 80px !important; }
+    .reveal .slides section.title-slide h1 { color:var(--rbw-white); font-size:2.4em; margin:0 0 0.15em; line-height:1.15; }
+    .reveal .slides section.title-slide h2 { color:var(--rbw-red); font-size:1.2em; font-weight:700; margin:0 0 1em; }
+    .reveal .slides section.title-slide p { color:rgba(255,255,255,0.65); font-size:0.7em; margin:0; }
+
+    /* Statement slide — split background */
+    .reveal .slides section.statement { text-align:center; padding:0 !important; display:flex !important; flex-direction:column; }
+    .reveal .slides section.statement .split-top { flex:1; background:#fff; display:flex; align-items:flex-end; justify-content:center; padding:0 80px 0.5em; }
+    .reveal .slides section.statement .split-top h1 { color:var(--rbw-navy); font-size:2.2em; line-height:1.15; margin:0; border:none; }
+    .reveal .slides section.statement .split-divider { height:4px; background:var(--rbw-red); margin:0 10%; border-radius:2px; flex-shrink:0; }
+    .reveal .slides section.statement .split-bottom { flex:1; background:var(--rbw-navy); display:flex; align-items:flex-start; justify-content:center; padding:0.5em 80px 0; }
+    .reveal .slides section.statement .split-bottom h2 { border:none; color:rgba(255,255,255,0.85); font-size:1.3em; font-weight:400; margin:0; }
+
+    /* Headings */
+    .reveal h2 { color:var(--rbw-navy); font-size:1.35em; border-bottom:3px solid var(--rbw-red); padding-bottom:0.25em; margin-bottom:0.6em; margin-top:0; }
+
+    /* Bullets */
+    .reveal ul { list-style:none; padding-left:0; margin:0; }
+    .reveal ul li { position:relative; padding-left:1.2em; margin-bottom:0.45em; font-size:0.78em; line-height:1.45; color:var(--rbw-gray); }
+    .reveal ul li::before { content:''; position:absolute; left:0; top:0.45em; width:7px; height:7px; background:var(--rbw-red); border-radius:50%; }
+
+    /* Stat cards */
+    .stat-row { display:flex; gap:16px; margin:0.5em 0; }
+    .stat-card { flex:1; background:var(--rbw-light-gray); border-top:4px solid var(--rbw-red); border-radius:0 0 8px 8px; padding:12px 14px; text-align:center; }
+    .stat-card.navy { border-top-color:var(--rbw-navy); }
+    .stat-card.gray { border-top-color:var(--rbw-gray); }
+    .stat-card .stat-num { font-size:1.7em; font-weight:800; color:var(--rbw-navy); line-height:1; }
+    .stat-card .stat-label { font-size:0.6em; color:var(--rbw-gray); margin-top:4px; line-height:1.25; }
+
+    /* Callout box */
+    .callout { background:rgba(27,48,87,0.05); border-left:4px solid var(--rbw-navy); padding:10px 16px; border-radius:0 6px 6px 0; margin:0.6em 0 0; font-size:0.7em; color:var(--rbw-gray); line-height:1.45; }
+    .callout strong { color:var(--rbw-navy); }
+    .callout.red { border-left-color:var(--rbw-red); background:rgba(200,16,46,0.04); }
+    .callout.red strong { color:var(--rbw-red); }
+
+    /* Two-column */
+    .two-col { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    .two-col h3 { font-size:0.75em; color:var(--rbw-navy); margin:0 0 0.3em; text-transform:uppercase; letter-spacing:0.04em; }
+
+    /* Three-column cards */
+    .three-cards { display:flex; gap:14px; margin:0.5em 0; }
+    .three-cards .card { flex:1; padding:14px 16px; border-radius:8px; }
+    .three-cards .card h3 { font-size:0.85em; margin:0 0 0.3em; }
+    .three-cards .card p { font-size:0.68em; color:var(--rbw-gray); margin:0; line-height:1.4; }
+    .three-cards .card.navy { background:rgba(27,48,87,0.07); border-top:4px solid var(--rbw-navy); }
+    .three-cards .card.navy h3 { color:var(--rbw-navy); }
+    .three-cards .card.red { background:rgba(200,16,46,0.05); border-top:4px solid var(--rbw-red); }
+    .three-cards .card.red h3 { color:var(--rbw-red); }
+    .three-cards .card.gray { background:rgba(88,89,91,0.07); border-top:4px solid var(--rbw-gray); }
+    .three-cards .card.gray h3 { color:var(--rbw-gray); }
+
+    /* Versus layout */
+    .vs-layout { display:grid; grid-template-columns:1fr auto 1fr; gap:16px; align-items:stretch; margin:0.5em 0; }
+    .vs-box { padding:18px 20px; border-radius:8px; }
+    .vs-box h3 { font-size:0.95em; margin:0 0 0.4em; }
+    .vs-box ul { font-size:0.95em; }
+    .vs-box.good { background:rgba(27,48,87,0.06); border-top:4px solid var(--rbw-navy); }
+    .vs-box.good h3 { color:var(--rbw-navy); }
+    .vs-box.bad { background:rgba(200,16,46,0.04); border-top:4px solid var(--rbw-red); }
+    .vs-box.bad h3 { color:var(--rbw-red); }
+    .vs-divider { display:flex; align-items:center; font-size:1.4em; font-weight:800; color:var(--rbw-gray); }
+
+    /* Close slide */
+    .reveal .slides section.close-slide { text-align:center; background:var(--rbw-navy); color:var(--rbw-white); display:flex; flex-direction:column; justify-content:center; align-items:center; }
+    .reveal .slides section.close-slide h2 { color:var(--rbw-white); font-size:1.8em; border:none; margin-bottom:0.5em; }
+    .reveal .slides section.close-slide p { color:rgba(255,255,255,0.85); font-size:0.8em; margin:0.15em 0; }
+
+    .highlight { color:var(--rbw-red); font-weight:700; }
+    .reveal .slide-number { display:none; }
+    .reveal .speaker-notes-indicator { display:none; }
+    .reveal .controls { bottom:50px !important; right:10px !important; }
+    .source { position:absolute; bottom:38px; left:0; right:0; text-align:center; font-size:0.48em; color:#aaa; font-style:italic; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- 1: TITLE -->
+      <section class="title-slide">
+        <h1>The 2026 Restoration<br>Marketing Reality</h1>
+        <h2>State of the Industry</h2>
+        <p>Rainbow Restoration Regionals 2026 | Spot On Solutions</p>
+        <div class="logo-bar">
+          <img class="logo-light" src="assets/rainbow-logo-white.png" alt="Rainbow Restoration">
+          <img class="logo-light" src="assets/sos-logo-white.png" alt="Spot On Solutions">
+        </div>
+        <aside class="notes">
+          Welcome everyone. I'm [Name] from Spot On Solutions. Over the next 15 minutes we're going to walk through the state of restoration marketing right now — what's changed, what the data says, and what the operators who are growing are doing differently.
+        </aside>
+      </section>
+
+      <!-- 2: HOOK -->
+      <section class="statement">
+        <div class="split-top">
+          <h1>How your customers find you has changed</h1>
+        </div>
+        <div class="split-divider"></div>
+        <div class="split-bottom">
+          <h2>Has your marketing kept up?</h2>
+        </div>
+        <div class="logo-bar">
+          <img src="assets/rainbow-logo-white.png" alt="Rainbow Restoration" style="display:inline;">
+          <img src="assets/sos-logo-white.png" alt="Spot On Solutions" style="display:inline;">
+        </div>
+        <aside class="notes">
+          Whether you're running ads, relying on referrals, or somewhere in between — the way homeowners find and choose a restoration company has fundamentally shifted. The search results page looks different. AI is changing how people research. Your competitors are spending more on digital every quarter. So the question is — has your marketing adapted?
+        </aside>
+      </section>
+
+      <!-- 3: THE OLD WAY IS BROKEN -->
+      <section>
+        <h2>The Old Way of Marketing Is Broken</h2>
+        <ul>
+          <li><span class="highlight">Lead Volume ≠ Revenue.</span> 50 "tire-kicker" leads are worse than 5 booked jobs.</li>
+          <li><span class="highlight">AI Has Taken the Wheel.</span> Google Ads is now "automation-first." Manual control is disappearing.</li>
+          <li><span class="highlight">The "Scatter Strategy" Fails.</span> Unifying your strategies creates synergy that produces results.</li>
+          <li><span class="highlight">2026 is about Discipline.</span> The franchises growing are the ones saying "No" to distractions.</li>
+        </ul>
+        <div class="callout red"><strong>The playbook from two years ago doesn't work anymore.</strong> The operators who are winning have adapted. The ones who haven't are paying more for less.</div>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
+        <aside class="notes">
+          Let's start with reality. If you're still running marketing the way you did two years ago, you're leaving money on the table. Lead volume doesn't equal revenue — 50 tire-kicker leads are worse than 5 booked jobs. Google Ads is now automation-first — the manual control you used to have is disappearing. And spreading your budget across 5 channels hoping something works — that scatter strategy fails. The franchises growing right now are the ones with discipline and focus.
+        </aside>
+      </section>
+
+      <!-- 4: THREE MAJOR SHIFTS -->
+      <section>
+        <h2>3 Major Shifts Caused by AI</h2>
+        <div class="three-cards">
+          <div class="card navy">
+            <h3>AI Runs the Ads</h3>
+            <p>Google Ads is now "automation-first" (AI Max / PMax). Manual bidding is disappearing. The algorithm decides who sees your ad.</p>
+          </div>
+          <div class="card red">
+            <h3>Google Is an Answer Engine</h3>
+            <p>AI Overviews answer customer questions on the search page, reducing website clicks. Your GBP is now your "second homepage."</p>
+          </div>
+          <div class="card gray">
+            <h3>Trust Is the New Currency</h3>
+            <p>In a world of AI content, real reviews and human video matter more than keyword stuffing. Authenticity wins.</p>
+          </div>
+        </div>
+        <div class="callout"><strong>The bottom line:</strong> Algorithms find the customer. Humans close the customer. Speed to lead and review velocity are your biggest competitive advantages.</div>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
+        <aside class="notes">
+          Three major shifts are driving all of this. First — AI runs the ads now. Google Ads is automation-first. The algorithm decides who sees your ad, not your keyword list. Second — Google is becoming an answer engine. AI Overviews are answering questions right on the search page. Your website gets fewer clicks, but your Google Business Profile matters more than ever. Third — trust is the new currency. In a world flooded with AI-generated content, real reviews and real video of your team doing the work are what set you apart.
+        </aside>
+      </section>
+
+      <!-- 5: CONSUMER INSIGHTS -->
+      <section>
+        <h2>What Your Customers Are Actually Doing</h2>
+        <div class="stat-row">
+          <div class="stat-card">
+            <div class="stat-num">84%</div>
+            <div class="stat-label">took action after seeing<br>a Google Ads search result</div>
+          </div>
+          <div class="stat-card navy">
+            <div class="stat-num">29%</div>
+            <div class="stat-label">already have a company name<br>in mind when they search</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">58%</div>
+            <div class="stat-label">were influenced by a blog<br>post in the last 30 days</div>
+          </div>
+          <div class="stat-card navy">
+            <div class="stat-num">3.5%</div>
+            <div class="stat-label">say they don't read<br>online reviews</div>
+          </div>
+        </div>
+        <ul style="margin-top:0.4em;font-size:0.9em;">
+          <li>48% will skip your website if it loads slowly and try a competitor</li>
+          <li>25% never go past the first page of search results</li>
+          <li>97% of operators say referrals are still the #1 source of new business</li>
+        </ul>
+        <p class="source">Sources: AdMall/SalesFuel AudienceSCAN 2025; Cleanfax Restoration Benchmarking Survey 2024</p>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
+        <aside class="notes">
+          So what are your customers actually doing? 84% of restoration customers took action after seeing a Google Ads result — that tells you search advertising works. But 29% already had a company name in mind before they searched — brand recognition is doing the heavy lifting for almost a third of your potential customers. 58% were influenced by a blog post in just the last 30 days. And only 3.5% say they don't read reviews — that means virtually everyone is checking your reviews before they call. Your website speed matters too — 48% will bounce if it loads slowly. And 97% of operators say referrals are still number one. The theme here is trust — it has to be built before the emergency.
+        </aside>
+      </section>
+
+      <!-- 6: WHAT WE SAW IN PAID SEARCH -->
+      <section>
+        <h2>What We Saw Across Our Restoration Clients</h2>
+        <div class="stat-row">
+          <div class="stat-card">
+            <div class="stat-num">$10.79M</div>
+            <div class="stat-label">Ad Spend Analyzed</div>
+          </div>
+          <div class="stat-card navy">
+            <div class="stat-num">+27.8%</div>
+            <div class="stat-label">Google Ads Spend<br>Growth YoY</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">+63.9%</div>
+            <div class="stat-label">LSA Spend<br>Growth YoY</div>
+          </div>
+          <div class="stat-card navy">
+            <div class="stat-num">+38.6%</div>
+            <div class="stat-label">Google Ads Conversions<br>Growth YoY</div>
+          </div>
+        </div>
+        <ul style="margin-top:0.4em;font-size:0.9em;">
+          <li>Conversions grew <strong>faster than spend</strong> — the industry CPL actually decreased</li>
+          <li>31% of consumers now require <strong>4.5+ stars</strong> to consider a business — up from 17% last year</li>
+          <li>Branded searches convert at <strong>6x the rate</strong> of generic service terms</li>
+        </ul>
+        <p class="source" style="bottom:28px;font-size:0.42em;">Sources: SOS x C&amp;R Magazine Cleaning &amp; Restoration Digital Advertising Report 2026; BrightLocal LCRS 2026</p>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
+        <aside class="notes">
+          We analyzed over $10 million in restoration ad spend across our clients. Google Ads spend grew 27.8% year over year. LSA spend grew almost 64% — the fastest-rising channel. But here's the good news: conversions grew faster than spend. The industry cost per lead actually went down. The operators who are optimizing are getting more efficient even as costs rise. Branded searches convert at 6x the rate of generic terms — when someone searches your company name, you've basically already won. And consumers are getting pickier — 31% now need 4.5 stars or higher just to consider you, up from 17% last year.
+        </aside>
+      </section>
+
+      <!-- 7: AI SLIDE -->
+      <section>
+        <h2>AI Is Changing How Customers Find You</h2>
+        <div class="stat-row" style="margin:0.3em 0;">
+          <div class="stat-card" style="padding:10px 12px;">
+            <div class="stat-num">14.2%</div>
+            <div class="stat-label">AI Conversion Rate</div>
+          </div>
+          <div class="stat-card navy" style="padding:10px 12px;">
+            <div class="stat-num">2.8%</div>
+            <div class="stat-label">Google Conversion Rate</div>
+          </div>
+          <div class="stat-card gray" style="padding:10px 12px;">
+            <div class="stat-num">5x</div>
+            <div class="stat-label">AI Converts Higher</div>
+          </div>
+        </div>
+        <div class="two-col" style="margin-top:0.2em;">
+          <div>
+            <h3 style="font-size:0.72em;">The Reality</h3>
+            <ul style="font-size:0.95em;">
+              <li>Google still handles 90% of search</li>
+              <li>AI converts at <strong>5x the rate</strong></li>
+              <li>41% of restoration customers use AI to research</li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="font-size:0.72em;">The Good News</h3>
+            <ul style="font-size:0.95em;">
+              <li>Google and AI reward the <strong>same thing</strong></li>
+              <li>Authoritative content, strong reviews, managed GBP</li>
+              <li>A brand worth citing — AI recommends what it "knows"</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout red"><strong>You don't need two strategies.</strong> Google and AI are two systems rewarding the same thing.</div>
+        <p class="source" style="bottom:28px;font-size:0.42em;">Source: Superprompt, 12M Visit Study, 2025</p>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
+        <aside class="notes">
+          This is the slide I want you to remember. A study of 12 million website visits found that traffic from AI tools like ChatGPT converts at 14.2% compared to Google's 2.8%. That's 5x higher. Google still handles 90% of search — it's not going away. But AI is where the highest-quality traffic is coming from. The good news? Google and AI reward the same thing. Authoritative content. Strong reviews. A well-managed GBP. A brand worth citing. You don't need two strategies. You need one good one.
+        </aside>
+      </section>
+
+      <!-- 8: TRUST & TECH ERA -->
+      <section>
+        <h2>The Trust &amp; Tech Era</h2>
+        <div class="three-cards">
+          <div class="card navy">
+            <h3>Algorithms Find the Customer</h3>
+            <p>AI decides who sees your ad better than humans can. Your job is to feed the machine good data — not micro-manage keywords.</p>
+          </div>
+          <div class="card red">
+            <h3>Humans Close the Customer</h3>
+            <p>Speed to lead and review velocity are your biggest competitive advantages. The first company to respond wins.</p>
+          </div>
+          <div class="card gray">
+            <h3>Differentiate with Trust</h3>
+            <p>Real reviews. Real video. Real people. In a world of AI content, authenticity is what makes you stand out.</p>
+          </div>
+        </div>
+        <div class="callout"><strong>The trend:</strong> Moving from "keyword targeting" toward "audience targeting" — finding the right person at the right moment, then winning them with trust.</div>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
+        <aside class="notes">
+          We're in what I call the Trust and Tech Era. The tech side — algorithms find your customers better than you can manually. Your job is to feed the machine good data. The human side — speed to lead, answering the phone, responding to reviews. The first company to respond still wins. And the differentiator is trust. Real reviews from real customers. Real video of your team on the job. In a world where AI can generate content for everyone, authenticity is what makes you stand out.
+        </aside>
+      </section>
+
+      <!-- 9: THRIVERS VS SURVIVORS -->
+      <section>
+        <h2>Thrivers vs. Survivors</h2>
+        <div class="vs-layout">
+          <div class="vs-box good">
+            <h3>The Thrivers</h3>
+            <ul>
+              <li>Consistent monthly budget</li>
+              <li>Track booked revenue, not just leads</li>
+              <li>Dominate 1-2 channels before adding more</li>
+              <li>Know their break-even CPL</li>
+              <li>Invest in brand and trust</li>
+            </ul>
+          </div>
+          <div class="vs-divider">vs</div>
+          <div class="vs-box bad">
+            <h3>The Survivors</h3>
+            <ul>
+              <li>React to slow months with panic spending</li>
+              <li>Track "leads" including spam</li>
+              <li>Spread budget across 5 channels</li>
+              <li>No idea what a lead actually costs them</li>
+              <li>Chase the next shiny tactic</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout"><strong>Which one are you?</strong> The difference isn't budget — it's discipline, tracking, and focus.</div>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
+        <aside class="notes">
+          Let me paint two pictures. The thrivers — they have a consistent monthly budget. They track booked revenue, not just lead count. They dominate one or two channels before spreading to more. They know their break-even cost per lead and they cut anything that exceeds it. They invest in brand and trust. The survivors — they react to slow months with panic spending. They track "leads" that include spam and tire-kickers. They spread their budget across five channels hoping something sticks. They have no idea what a lead actually costs them. The difference isn't budget — it's discipline. Which one are you right now? And which one do you want to be?
+        </aside>
+      </section>
+
+      <!-- 10: CLOSE -->
+      <section class="close-slide">
+        <div style="display:flex;gap:50px;align-items:center;justify-content:center;margin-bottom:1.8em;">
+          <img src="assets/rainbow-logo-white.png" alt="Rainbow Restoration" style="height:100px;">
+          <img src="assets/sos-logo-white.png" alt="Spot On Solutions" style="height:65px;">
+        </div>
+        <h2 style="font-size:2em;margin-bottom:0.4em;">Adapt the Strategy.<br>Build the Trust.<br>Win the Market.</h2>
+        <p style="color:rgba(255,255,255,0.6);">Authoritative content. Strong reviews. A brand worth citing.</p>
+        <div class="logo-bar" style="display:none;"></div>
+        <aside class="notes">
+          Adapt the strategy — the old playbook is done. Build the trust — reviews, speed to lead, real content. Win the market — be the name they already know when the emergency hits. Thank you. We'll be around all day if you want to talk about any of this.
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: false,
+      controls: true,
+      showNotes: false,
+      plugins: [RevealNotes],
+      width: '100%',
+      height: '100%',
+      margin: 0,
+      minScale: 0.2,
+      maxScale: 2.0,
+      transition: 'slide',
+      transitionSpeed: 'default',
+      center: false
+    });
+  </script>
+</body>
+</html>
