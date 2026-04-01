@@ -99,7 +99,8 @@
     .reveal .slides section.close-slide p { color:rgba(255,255,255,0.85); font-size:0.8em; margin:0.15em 0; }
 
     .highlight { color:var(--rbw-red); font-weight:700; }
-    .reveal .slide-number { display:none; }
+    .reveal .slide-number { color:var(--rbw-gray); font-size:11px; right:16px; bottom:16px; }
+    .title-slide .reveal .slide-number, .close-slide .reveal .slide-number { color:rgba(255,255,255,0.4); }
     .reveal .speaker-notes-indicator { display:none; }
     .reveal .controls { bottom:50px !important; right:10px !important; }
     .source { position:absolute; bottom:38px; left:0; right:0; text-align:center; font-size:0.48em; color:#aaa; font-style:italic; }
@@ -447,7 +448,7 @@
   <script>
     Reveal.initialize({
       hash: true,
-      slideNumber: false,
+      slideNumber: 'c/t',
       controls: true,
       showNotes: false,
       plugins: [RevealNotes],
